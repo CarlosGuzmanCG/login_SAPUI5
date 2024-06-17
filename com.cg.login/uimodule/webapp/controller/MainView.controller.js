@@ -11,6 +11,10 @@ sap.ui.define([
         return Controller.extend("com.cg.login.controller.MainView", {
             onInit: function () {
                 sap.ui.getCore().applyTheme("sap_fiori_3_dark");
+            },
+
+            navToSignUp:function(oEvent){
+                this.getRouter().navTo("SignUp");
             }
         });
     });
