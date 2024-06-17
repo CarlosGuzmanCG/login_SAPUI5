@@ -76,6 +76,13 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "SignUp",
+          "pattern": "RouteSignUp",
+          "target": [
+            "TargetSignUp"
+          ]
         }
       ],
       "targets": {
@@ -85,6 +92,11 @@
           "clearControlAggregation": false,
           "viewId": "MainView",
           "viewName": "MainView"
+        },
+        "TargetSignUp": {
+          "viewType": "XML",
+          "viewId": "SignUp",
+          "viewName": "SignUp"
         }
       }
     },
