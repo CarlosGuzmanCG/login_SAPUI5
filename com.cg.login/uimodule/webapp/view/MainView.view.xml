@@ -17,12 +17,14 @@
                 justifyContent="Center"
             >
                 <FlexBox
+                    class="customLoginBackground"
                     alignItems="Center"
                     direction="Row"
                     justifyContent="Center"
                 >
                     <FlexBox
                         alignItems="Center"
+                        class="customLoginBackGroud"
                         direction="Column"
                         justifyContent="Center"
                         width="400px"
@@ -33,8 +35,9 @@
                             width="200px"
                         />
                     </FlexBox>
-                    <l:VerticalLayout class="sapUiSmallMargin">
+                    <l:VerticalLayout class="sapUiSmallMargin vertBackGroup">
                         <Label
+                            class="TxtBold"
                             text="{i18n>LbEmail}"
                             labelFor="emailInput"
                         />
@@ -47,6 +50,7 @@
                             value=""
                         />
                         <Label
+                            class="TxtBold"
                             text="{i18n>LbPwd}"
                             labelFor="pwdInput"
                         />
@@ -69,7 +73,7 @@
                             />
                         </FlexBox>
                         <Link
-                            class="sapUiSmallMarginTop"
+                            class="sapUiSmallMarginTop txtLink"
                             text="{i18n>LnSignUp}"
                             press=".navToSignUp"
                         />

@@ -1,1 +1,33 @@
 /* Enter your custom styles here */
+.customLoginBackground{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    height: 500px;
+}
+
+.vertBackGroup{
+    background-color: rgb(154, 154, 236);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    height: 250px;
+
+}
+
+.customLoginBackGroud{
+    border-radius: 25px;
+    background-color: rgb(157, 157, 247);
+}
+
+.TxtBold{
+    font-weight: bold;
+    color: #000;
+    font-size: 17px;
+}
+
+.txtLink{
+    color: rgb(24, 96, 228);
+    font-size: 15px;
+}
