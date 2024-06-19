@@ -74,7 +74,7 @@
                             type="Password"
                             width="350px"
                             placeholder="{i18n>InpPwd}"
-                            value=""
+                            value="{userDetails>/signUpDetails/password}"
                         />
                         <Label 
                             text="{i18n>LbPwdConfirm}" 
@@ -87,7 +87,7 @@
                             type="Password" 
                             width="350px" 
                             placeholder="{i18n>InpPCwd}" 
-                            value=""
+                            value="{userDetails>/signUpDetails/cnfPassword}"
                         />
 
                         <FlexBox
