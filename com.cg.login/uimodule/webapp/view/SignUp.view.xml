@@ -48,7 +48,7 @@
                             type="Text"
                             width="350px"
                             placeholder="{i18n>InPName}"
-                            value=""
+                            value="{userDetails>/signUpDetails/name}"
                         />
                         <Label
                             class="TxtBold"
@@ -61,7 +61,7 @@
                             type="Email"
                             width="350px"
                             placeholder="{i18n>InPEmail}"
-                            value=""
+                            value="{userDetails>/signUpDetails/email}"
                         />
                         <Label
                             class="TxtBold"

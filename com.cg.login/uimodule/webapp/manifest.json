@@ -50,6 +50,9 @@
         "settings": {
           "bundleName": "com.cg.login.i18n.i18n"
         }
+    },
+    "userDetails":{
+      "type": "sap.ui.model.json.JSONModel"
       }
     },
     "resources": {
