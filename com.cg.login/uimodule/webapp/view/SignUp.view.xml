@@ -1,12 +1,13 @@
 <mvc:View
-    controllerName="com.cg.login.controller.MainView"
-    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="com.cg.login.controller.SignUp"
     displayBlock="true"
     xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
 >
     <Page
-        id="page"
+        title="{}"
+        id="SignUp"
         showHeader="false"
     >
         <content>
@@ -35,7 +36,20 @@
                             width="200px"
                         />
                     </FlexBox>
-                    <l:VerticalLayout class="sapUiSmallMargin vertBackGroup">
+                    <l:VerticalLayout class="sapUiSmallMargin vertBackGroup2">
+                        <Label
+                            class="TxtBold"
+                            text="{i18n>LbName}"
+                            labelFor="emailInput"
+                        />
+                        <Input 
+                            id="nameInput"
+                            class="sapUiSmallMarginBottom"
+                            type="Text"
+                            width="350px"
+                            placeholder="{i18n>InPName}"
+                            value="{userDetails>/signUpDetails/name}"
+                        />
                         <Label
                             class="TxtBold"
                             text="{i18n>LbEmail}"
@@ -47,7 +61,7 @@
                             type="Email"
                             width="350px"
                             placeholder="{i18n>InPEmail}"
-                            value=""
+                            value="{userDetails>/signUpDetails/email}"
                         />
                         <Label
                             class="TxtBold"
@@ -59,23 +73,37 @@
                             class="sapUiSmallMarginBottom"
                             type="Password"
                             width="350px"
-                            placeholder="{i18n>InPPwd}"
-                            value=""
+                            placeholder="{i18n>InpPwd}"
+                            value="{userDetails>/signUpDetails/password}"
                         />
+                        <Label 
+                            text="{i18n>LbPwdConfirm}" 
+                            labelFor="pwdInput" 
+                            class="TxtBold"
+                        />
+                        <Input 
+                            id="pwdCInput" 
+                            class="sapUiSmallMarginBottom" 
+                            type="Password" 
+                            width="350px" 
+                            placeholder="{i18n>InpPCwd}" 
+                            value="{userDetails>/signUpDetails/cnfPassword}"
+                        />
+
                         <FlexBox
                             alignItems="Start"
                             justifyContent="End"
                         >
                             <Button
                                 type="Emphasized"
-                                text="{i18n>BtSignIn}"
+                                text="{i18n>BtSignUp}"
                                 press=".onPressSignIn"
                             />
                         </FlexBox>
                         <Link
                             class="sapUiSmallMarginTop txtLink"
-                            text="{i18n>LnSignUp}"
-                            press=".navToSignUp"
+                            text="{i18n>LnHaveAcc}"
+                            press=".navToSignIn"
                         />
                     </l:VerticalLayout>
                 </FlexBox>

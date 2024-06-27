@@ -32,7 +32,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.102.0",
       "libs": {
@@ -50,6 +50,9 @@
         "settings": {
           "bundleName": "com.cg.login.i18n.i18n"
         }
+    },
+    "userDetails":{
+      "type": "sap.ui.model.json.JSONModel"
       }
     },
     "resources": {
@@ -76,6 +79,13 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "SignUp",
+          "pattern": "RouteSignUp",
+          "target": [
+            "TargetSignUp"
+          ]
         }
       ],
       "targets": {
@@ -85,6 +95,11 @@
           "clearControlAggregation": false,
           "viewId": "MainView",
           "viewName": "MainView"
+        },
+        "TargetSignUp": {
+          "viewType": "XML",
+          "viewId": "SignUp",
+          "viewName": "SignUp"
         }
       }
     },
