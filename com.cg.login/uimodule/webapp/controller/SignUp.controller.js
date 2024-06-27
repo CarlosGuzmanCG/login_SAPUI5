@@ -24,17 +24,27 @@ sap.ui.define([
         onPressSignIn:function(oEvent){
            const oUserModel = this.getOwnerComponent().getModel("userDetails"); //get model
            const oDetails = oUserModel.getProperty("/signUpDetails"); //get json
+           const that = this; //get controller
+           const user = {
+            name: oDetails.name,
+            email: oDetails.email,
+           }
 
-           //logic to create an account for user
            const oFirebaseModel = this.getOwnerComponent().getModel("firebase").getData(); // get data from model firebase
            oFirebaseModel.fireauth.createUserWithEmailAndPassword(oDetails.email, oDetails.password)
             .then((userCredential) => {
+                that._postToUserDetails(user,userCredential.user.uid);
                 MessageBox.success("Account created successfully!");
           })
           .catch((error) => {
                 MessageBox.error(error.message);
           });
            
+        },
+
+        _postToUserDetails: function(user,uid){
+            const oFirebaseModelData = this.getOwnerComponent().getModel("firebase").getData(); // get data from model firebase
+            oFirebaseModelData.firestore.collection("user_details").doc(uid).set(user); //add data to firestore
         },
 
         navToSignIn: function(){
